@@ -22,7 +22,7 @@ def load_and_clean(path):
     df["price"] = pd.to_numeric(df["price"], errors="coerce")
     df["revenue"] = df["price"] * df["quantity"]
     # (여기서 정제된 df를 돌려주려고 했는데...)   <-- 무언가 빠져 있다
-    return df
+    return df #FIXED: 반환값을 설정해주었다.
 
 def main():
     df = load_and_clean("dirty_sales.csv")
